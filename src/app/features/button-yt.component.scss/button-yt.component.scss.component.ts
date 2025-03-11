@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button-yt',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './button-yt.component.scss.component.css'
 })
 export class ButtonYtComponentScssComponent {
+  @Input() text: string = 'Button';
+  @Output() onclick = new EventEmitter<void>();
 
+  handleClick() {
+    this.onclick.emit();
+  }
 }
