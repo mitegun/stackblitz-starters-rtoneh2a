@@ -17,11 +17,10 @@ import { ButtonYtComponentScssComponent } from './app/features/button-yt.compone
     <img [src]="imageUrl" alt="Illustration" />
     <img [src]="imgUrl2" alt="Illustration" />
     <img [src]="imageUrl" alt="Illustration" />
-    <img [src]="imgUrl2" alt="Illustration" />
 
 
     <input type = "text" [(ngModel)]="first_name"/>
-    <app-button-yt (onClick)="alert()" [text]>zaza</app-button-yt>
+    <app-button-yt (onClick)="alert()">zaza</app-button-yt>
   `,
 })
 export class App {
