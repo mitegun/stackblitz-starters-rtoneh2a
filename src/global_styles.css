@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+p {
+  padding: 12px;
+  border: 1px solid #000;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+}
+p:hover {
+  background-image: url('https://images.steamusercontent.com/ugc/768353651069129085/773A5419B243F8B6D8E5892BDDA54E9547C6E604/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
