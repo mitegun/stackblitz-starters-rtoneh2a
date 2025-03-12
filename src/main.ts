@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { YoloInputComponent } from './app/yolo_input/yolo_input.component';
+import { YoloDisplayComponent } from './app/yolo_display/yolo_display.component';
 import { ButtonYtComponentScssComponent } from './app/features/button-yt.component.scss/button-yt.component.scss.component';
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, ButtonYtComponentScssComponent],
+  imports: [CommonModule, FormsModule, ButtonYtComponentScssComponent,YoloInputComponent, YoloDisplayComponent],
   template: `
     <h1>Hello from {{ name | uppercase}}!</h1>
     
@@ -13,6 +15,11 @@ import { ButtonYtComponentScssComponent } from './app/features/button-yt.compone
     <h3>First Name: {{ first_name }}</h3>
     <p (click)="incrementTitle()">Test</p>
     <h1>Hello, from CYTECH</h1>
+    <div class="container">
+    <h1>YOLO Generator</h1>
+    <app-yolo-input (countChange)="updateYoloCount($event)"></app-yolo-input>
+    <app-yolo-display [count]="yoloCount"></app-yolo-display>
+    </div>
     <img [src]="imgUrl2" alt="Illustration" />
     <img [src]="imageUrl" alt="Illustration" />
     <img [src]="imgUrl2" alt="Illustration" />
@@ -40,6 +47,11 @@ export class App {
   }
   alert(){
     alert("hello gros bg")
+  }
+  yoloCount: number = 0;
+
+  updateYoloCount(count: number) {
+    this.yoloCount = count;
   }
 }
 
